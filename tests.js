@@ -3,7 +3,7 @@ var arrayTasks = require('./array_tasks.js')
 
 describe('Array tasks', function () {
 
-	xit('should concatenate two arrays, returning a new array', function () {
+	it('should concatenate two arrays, returning a new array', function () {
 		var arr1 = [1, 2, 3]
 		var arr2 = [4, 5, 6]
 		var expectation = [1, 2, 3, 4, 5, 6]
