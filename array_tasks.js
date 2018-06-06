@@ -26,15 +26,17 @@ var arrayTasks = {
 	},
 
 	findDuplicates: function (arr) {
-	var sorted_arr = arr.slice().sort();
-	var results = [];
-	for (var i = 0; i < sorted_arr.length - 1; i++) {
-	    if (sorted_arr[i + 1] == sorted_arr[i]){
-				if (results.includes(sorted_arr[i]) === false)
-					results.push(sorted_arr[i]);
-				}
-	    }
-			return results;
+	let sorted_arr = arr.slice().sort();
+	let results = [];
+
+	sorted_arr.forEach(function(number){
+		if (sorted_arr[number + 1] === sorted_arr[number]){
+	 	 if (results.includes(sorted_arr[number]) === false){
+	 		 results.push(sorted_arr[number]);
+	 	 }
+	  }
+	})
+	return results;
 	},
 
 	removeAndClone: function (arr, valueToRemove) {
